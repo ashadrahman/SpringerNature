@@ -2,7 +2,7 @@ name: Accounts - Check
 
 on:
   pull_request:
-    branches: [staging, main]
+    branches: [master]
 
 jobs:
   build-and-test:
