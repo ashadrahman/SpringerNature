@@ -5,24 +5,8 @@ on:
     branches: [master]
 
 jobs:
-  build-and-test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - name: install dependencies
-        run: |-
-          yarn
-      - name: Build
-        run: |-
-          yarn build
-      - name: run tests
-        run: |-
-          yarn test
+  
   sonarcloud:
-    needs: [build-and-test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
